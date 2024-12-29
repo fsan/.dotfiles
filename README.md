@@ -17,3 +17,18 @@ cp dot.vimrc ~/.vimrc
 vim +PluginInstall +qall
 
 ```
+
+
+```bash
+# vim +:PluginInstall
+cd ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
+set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/icu4c@76/lib/pkgconfig"
+set -gx CPPFLAGS "-I/opt/homebrew/opt/icu4c@76/include"
+set -gx LDFLAGS "-L/opt/homebrew/opt/icu4c@76/lib"
+fish_add_path /opt/homebrew/opt/icu4c@76/sbin
+fish_add_path /opt/homebrew/opt/icu4c@76/bin
+./install.py --all
+# Then run vundle install
+vim +:PluginInstall 
+```
