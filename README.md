@@ -11,6 +11,9 @@
 # Install dependencies
 brew install cmake icu4c clang-format # MacOS
 
+# Get monokai theme
+curl -so ~/.vim/colors/monokai.vim https://raw.githubusercontent.com/ku1ik/vim-monokai/refs/heads/master/colors/monokai.vim
+
 # Install vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp dot.vimrc ~/.vimrc

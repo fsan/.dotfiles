@@ -40,6 +40,11 @@ Plugin 'wenlongche/Trinity'      " Trinity
 " Initialize plugins (run :PluginInstall after saving)
 filetype plugin indent on
 
+" Theme
+" https://github.com/ku1ik/vim-monokai/tree/master
+syntax enable
+colorscheme monokai
+
 " Other optional settings for better usability
 set cursorline                  " Highlight the current line
 set hlsearch                     " Highlight search results
