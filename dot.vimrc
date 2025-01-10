@@ -36,6 +36,11 @@ Plugin 'wenlongche/SrcExpl'      " SrcExpl
 Plugin 'vim-scripts/taglist.vim' " Taglist
 Plugin 'preservim/nerdtree'      " NerdTree
 Plugin 'wenlongche/Trinity'      " Trinity
+Plugin 'junegunn/fzf.vim'        " Fuzzy Finder
+Plugin 'itchyny/lightline.vim'   " Light Line (hardstatus)
+Plugin 'terryma/vim-multiple-cursors' " Mulitple line selection
+Plugin 'tpope/vim-surround'      " vim-surround (auto brackets/parathenses/etc)
+
 
 " Initialize plugins (run :PluginInstall after saving)
 filetype plugin indent on
@@ -49,7 +54,9 @@ colorscheme monokai
 set cursorline                  " Highlight the current line
 set hlsearch                     " Highlight search results
 
+" ycm complete
 let g:ycm_confirm_extra_conf = 0
+nnoremap gd :tab split \| YcmCompleter GoToDefinition<CR>
 
 " SrcExpl settings START
 " SrcExpl settings END
@@ -67,3 +74,13 @@ nmap <F10> :TrinityToggleTagList<CR>
 " Open and close the NERD Tree separately 
 nmap <F11> :TrinityToggleNERDTree<CR> 
 " Trinity END
+
+" Lightline START
+set laststatus=2
+let g:lightline = {
+  \     'active': {
+  \         'left': [['mode', 'paste' ], ['readonly', 'filename', 'modified']],
+  \         'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding']]
+  \     }
+  \ }
+" Lightline START
