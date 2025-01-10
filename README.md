@@ -9,7 +9,11 @@
 # VIM - Vi IMproved 9.1
 
 # Install dependencies
-brew install cmake icu4c clang-format # MacOS
+#    YouCompleteMe
+brew install cmake icu4c clang-format # MacOS 
+#    FZF (fuzzy finder for vim)
+brew install fzf bat ripgrep the_silver_searcher perl universal-ctags
+
 
 # Get monokai theme
 curl -so ~/.vim/colors/monokai.vim https://raw.githubusercontent.com/ku1ik/vim-monokai/refs/heads/master/colors/monokai.vim

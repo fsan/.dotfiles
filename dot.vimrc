@@ -36,6 +36,7 @@ Plugin 'wenlongche/SrcExpl'      " SrcExpl
 Plugin 'vim-scripts/taglist.vim' " Taglist
 Plugin 'preservim/nerdtree'      " NerdTree
 Plugin 'wenlongche/Trinity'      " Trinity
+Plugin 'junegunn/fzf'            " Fuzzy Finder
 Plugin 'junegunn/fzf.vim'        " Fuzzy Finder
 Plugin 'itchyny/lightline.vim'   " Light Line (hardstatus)
 Plugin 'terryma/vim-multiple-cursors' " Mulitple line selection
@@ -83,4 +84,23 @@ let g:lightline = {
   \         'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding']]
   \     }
   \ }
-" Lightline START
+" Lightline END
+
+
+" fzf  START
+let $FZF_DEFAULT_COMMAND = 'rg --files'
+let g:fzf_default_opts = '--height 50% --reverse --border'
+let g:fzf_layout = { 'window': { 'width': 0.7, 'height': 0.6 } }
+let g:fzf_default_opts .= ' --multi'
+
+" Key mappings
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>g :Rg<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+" Map Ctrl+P to open fzf for files
+nnoremap <silent> <C-p> :Files<CR>
+
+" Optionally, map other useful commands
+nnoremap <silent> <C-g> :Rg<CR>        " Search text in files using ripgrep
+nnoremap <silent> <C-b> :Buffers<CR>   " List open buffers
+" fzf  END
