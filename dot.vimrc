@@ -100,7 +100,8 @@ nnoremap <silent> <leader>b :Buffers<CR>
 " Map Ctrl+P to open fzf for files
 nnoremap <silent> <C-p> :Files<CR>
 
-" Optionally, map other useful commands
-nnoremap <silent> <C-g> :Rg<CR>        " Search text in files using ripgrep
-nnoremap <silent> <C-b> :Buffers<CR>   " List open buffers
+" Search text in files using ripgrep
+nnoremap <silent> <C-g> :Rg<CR>
+" List open buffers
+nnoremap <silent> <C-b> :Buffers<CR>
 " fzf  END
