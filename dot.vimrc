@@ -41,6 +41,7 @@ Plugin 'junegunn/fzf.vim'        " Fuzzy Finder
 Plugin 'itchyny/lightline.vim'   " Light Line (hardstatus)
 Plugin 'terryma/vim-multiple-cursors' " Mulitple line selection
 Plugin 'tpope/vim-surround'      " vim-surround (auto brackets/parathenses/etc)
+Plugin 'easymotion/vim-easymotion'
 
 
 " Initialize plugins (run :PluginInstall after saving)
@@ -105,3 +106,27 @@ nnoremap <silent> <C-g> :Rg<CR>
 " List open buffers
 nnoremap <silent> <C-b> :Buffers<CR>
 " fzf  END
+
+" Easymotion START
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+
+" Easymotion END
